@@ -1,10 +1,10 @@
-import { useState } from "react";
+
 import HomePage from "./pages/HomePage";
-import Page2 from "./pages/Page2";
+import ShirtDetailsPage from "./pages/ShirtDetailsPage";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/Navbar";
-// import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <br />
 
       <Routes>
-        <Route path="/page2" element={<Page2 />} />
+        <Route path="/shirts/details/:shirtId" element={<ShirtDetailsPage />} />
         <Route path="/" element={<HomePage />} />
       </Routes>
     </>
