@@ -6,7 +6,9 @@ const ShirtContext = createContext();
 
 const ShirtProvider = ({ children }) => {
   const [shirts, setShirts] = useState([]);
+  const [orders, setOrders] = useState([])
   const [loading, setLoading] = useState(true);
+
 
   const getShirts = () => {
     axios
@@ -22,14 +24,30 @@ const ShirtProvider = ({ children }) => {
       });
   }
 
+  const getOrders = () => {
+    axios.get(API_URL + '/orders')
+      .then((response) => {
+        console.log("Orders ===>", response.data)
+        setOrders(response.data)
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err)
+        setLoading(false);
+      })
+  } 
+
+  
+
   useEffect(() => {
     
     getShirts()
+    getOrders()
 
 }, [])
 
   return (
-    <ShirtContext.Provider value={{ shirts, loading, getShirts }}>
+    <ShirtContext.Provider value={{ shirts, loading, getShirts, orders, getOrders }}>
         {children}
     </ShirtContext.Provider>
   );

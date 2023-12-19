@@ -61,9 +61,8 @@ const ShirtDetailsPage = () => {
               right: "380px",
               textAlign: "center",
             }}
-          >
-            Testing the position of this text. Responsive but does not hold same
-            position in resize.
+          >Tesing the text position. Does not hold position in resize.
+            
           </p>
 
           <Card.Body>
@@ -80,7 +79,7 @@ const ShirtDetailsPage = () => {
                 <Offcanvas.Title>Design Your Tee Typography</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <DesignForm />
+                <DesignForm shirtId={shirt._id}/>
               </Offcanvas.Body>
             </Offcanvas>
           </Card.Body>

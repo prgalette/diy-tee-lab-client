@@ -71,7 +71,7 @@ const HomePage = () => {
               return (
                 <Link
                   key={shirt._id}
-                  to={`/shirts/details/${shirt._id}`}
+                  to={`/shirts/${shirt._id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <ShirtCard shirt={shirt} />
