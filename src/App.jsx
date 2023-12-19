@@ -13,8 +13,8 @@ function App() {
       <br />
 
       <Routes>
-        <Route path="/shirts/details/:shirtId" element={<ShirtDetailsPage />} />
         <Route path="/" element={<HomePage />} />
+        <Route path="/shirts/details/:shirtId" element={<ShirtDetailsPage />} />
       </Routes>
     </>
   );

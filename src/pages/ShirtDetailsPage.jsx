@@ -5,6 +5,8 @@ import { Offcanvas } from "react-bootstrap";
 import { Card } from "react-bootstrap";
 import { ShirtContext } from "../context/shirt.context";
 import { Button } from "react-bootstrap";
+import DesignForm from "../components/DesignForm";
+import { Form, FloatingLabel } from "react-bootstrap";
 
 const ShirtDetailsPage = () => {
   // The state variable `shirt` is currently an empty object {},
@@ -41,7 +43,29 @@ const ShirtDetailsPage = () => {
     <Container>
       {shirt && (
         <Card style={{ width: "99%" }}>
-          <Card.Img variant="top" src={shirt.image_url} />
+          <Card.Img
+            variant="top"
+            src={shirt.image_url}
+            style={{ display: "block" }}
+          />
+
+          <p
+            style={{
+              fontSize: "2vw",
+              position: "absolute",
+              color: "grey",
+              display: "flex",
+              justifyContent: "center",
+              top: "190px",
+              left: "380px",
+              right: "380px",
+              textAlign: "center",
+            }}
+          >
+            Testing the position of this text. Responsive but does not hold same
+            position in resize.
+          </p>
+
           <Card.Body>
             <Card.Title>{shirt.title}</Card.Title>
             <Card.Text className="text-center">
@@ -53,11 +77,10 @@ const ShirtDetailsPage = () => {
             </Button>
             <Offcanvas show={show} onHide={handleClose}>
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+                <Offcanvas.Title>Design Your Tee Typography</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                Some text as placeholder. In real life you can have the elements
-                you have chosen. Like, text, images, lists, etc.
+                <DesignForm />
               </Offcanvas.Body>
             </Offcanvas>
           </Card.Body>
