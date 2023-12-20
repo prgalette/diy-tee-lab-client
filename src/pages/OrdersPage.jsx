@@ -5,7 +5,7 @@ import { ShirtContext } from "../context/shirt.context";
 import ShirtCard from "../components/ShirtCard";
 
 const OrdersPage = () => {
-  // const { loading, shirts, getShirts } = useContext(ShirtContext);
+ 
 
   const { orders, loading, getOrders } = useContext(ShirtContext)
 
@@ -13,7 +13,7 @@ const OrdersPage = () => {
     if (!orders.length) {
       getOrders();
     }
-  }, [orders]);
+  }, []);
 
 
 
@@ -31,13 +31,7 @@ const OrdersPage = () => {
                 <Link to={`/order-details/${shirt.id}`} key={shirt.id}>        
                   <h2>{shirt.designName}</h2>
                 </Link>
-                // <Link
-                //   key={shirt.id}
-                //   to={`/shirts/${shirt._id}`}
-                //   style={{ textDecoration: "none" }}
-                // >
-                  // <ShirtCard shirt={shirt._id} />
-                // </Link>
+                
               );
             })}
           </>

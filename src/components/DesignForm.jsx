@@ -28,7 +28,7 @@ const DesignForm = ({ shirtId }) => {
   const handleChange = (e) => {
     console.log("Value", e.target.value)
     setThisOrder((prev) => ({...prev, [e.target.name]: e.target.value}))
-    console.log("This order", thisOrder)
+    // console.log("This order", thisOrder)
   };
 
   
