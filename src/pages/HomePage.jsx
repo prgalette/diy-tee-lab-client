@@ -20,8 +20,14 @@ const HomePage = () => {
 
   return (
     <Container>
-      <h1>Home</h1>
+      <h1>Welcome to the Lab!</h1>
       <br />
+      <p>
+        Hello and welcome to the Do-It-Yourself tee shirt lab! Here, you have
+        the opportunity to make a statement and respresent what you want the
+        world to see! Simply get started by selecting which one of the Unisex
+        tees or Hoodies you'd like to design. Ready to make a statement?
+      </p>
       {/* <div className="d-flex justify-content-center">
         <div className="card" style={{ width: "26rem" }}>
           <img src={whiteTees} className="card-img-top" alt="..." />
@@ -70,8 +76,8 @@ const HomePage = () => {
             {shirts.map((shirt) => {
               return (
                 <Link
-                  key={shirt._id}
-                  to={`/shirts/${shirt._id}`}
+                  key={shirt.id}
+                  to={`/shirts/${shirt.id}`}
                   style={{ textDecoration: "none" }}
                 >
                   <ShirtCard shirt={shirt} />

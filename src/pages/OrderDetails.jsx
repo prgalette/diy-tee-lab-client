@@ -57,8 +57,10 @@ const OrderDetails = () => {
     // const newOrders = orders.filter((thisOrder) => thisOrder !== deletingOrder);
     // setThisOrder(newOrders);                
     // Make a DELETE request to delete the project
+    console.log("this is our ID ===>", orderId)
     axios
-      .delete(API_URL + "/orders/" + orderId, thisOrder)
+      .delete(`${API_URL}/orders/${orderId}`)
+      // .delete(API_URL + "/orders/" + orderId)
       .then(() => {
         // Once the delete request is resolved successfully
         // navigate back to the list of projects.

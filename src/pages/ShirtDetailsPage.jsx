@@ -13,6 +13,8 @@ const ShirtDetailsPage = () => {
   // but you should use it to store the response from the server API (the shirt details).
   const [shirt, setShirt] = useState(null);
 
+  const [state, setState] = useState("");
+
   let { shirtId } = useParams();
 
   const { loading, shirts, getShirts } = useContext(ShirtContext);
@@ -30,7 +32,7 @@ const ShirtDetailsPage = () => {
     } else {
       console.log("Shirt Id ===>", shirtId);
       console.log("Shirts at 22 ===>", shirts);
-      let thisShirt = shirts.find((shirt) => shirt._id === shirtId);
+      let thisShirt = shirts.find((shirt) => shirt.id == shirtId);
       setShirt(thisShirt);
 
       console.log("This shirt ===>", thisShirt);
@@ -49,21 +51,30 @@ const ShirtDetailsPage = () => {
             style={{ display: "block" }}
           />
 
-          <p
-            style={{
-              fontSize: "2vw",
-              position: "absolute",
-              color: "grey",
-              display: "flex",
-              justifyContent: "center",
-              top: "190px",
-              left: "380px",
-              right: "380px",
-              textAlign: "center",
-            }}
-          >Tesing the text position. Does not hold position in resize.
-            
-          </p>
+          <>
+            {/* <input
+              value={state}
+              onChange={(event) => {
+                setState(event.target.value);
+              }}
+            /> */}
+
+            <p
+              style={{
+                fontSize: "2vw",
+                position: "absolute",
+                color: "grey",
+                display: "flex",
+                justifyContent: "center",
+                top: "190px",
+                left: "380px",
+                right: "380px",
+                textAlign: "center",
+              }}
+            >
+              {state}
+            </p>
+          </>
 
           <Card.Body>
             <Card.Title>{shirt.title}</Card.Title>
@@ -79,7 +90,7 @@ const ShirtDetailsPage = () => {
                 <Offcanvas.Title>Design Your Tee Typography</Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <DesignForm shirtId={shirt._id}/>
+                <DesignForm shirtId={shirt.id} />
               </Offcanvas.Body>
             </Offcanvas>
           </Card.Body>

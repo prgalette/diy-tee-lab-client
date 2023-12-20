@@ -66,7 +66,7 @@ const DesignForm = ({ shirtId }) => {
       <FloatingLabel controlId="floatingTextarea2" label="Message">
         <Form.Control
           onChange={(e) => handleChange(e)}
-          name='message'
+          name="message"
           type="text"
           as="textarea"
           placeholder="Enter Your Message"
