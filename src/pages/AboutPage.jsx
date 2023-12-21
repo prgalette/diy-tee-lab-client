@@ -8,11 +8,13 @@ const AboutPage = () => {
         backgroundImage: `URL(
           "https://res.cloudinary.com/dxl0hu3v9/image/upload/v1703166330/01_wucvds.jpg"
         )`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         height: "100vh",
         opacity: "80%",
       }}
     >
-      <Accordion>
+      <Accordion className="d-flex justify-content-center">
         <Accordion.Item eventKey="0">
           <Accordion.Header>About</Accordion.Header>
           <Accordion.Body>
@@ -32,10 +34,10 @@ const AboutPage = () => {
             What is Print-On-Demand (POD)? POD is a fulfillment process that
             dropships products to customers only after a sale goes through. This
             means that the merchandise will never require management, storage,
-            or protection. The fulfillment model that will be built allows a customer to buy
-            products in the DIY Tee Lab and the order goes directly to the Print
-            Provider. This eliminates the need for order fulfillment and storage
-            space.
+            or protection. The fulfillment model that will be built allows a
+            customer to buy products in the DIY Tee Lab and the order goes
+            directly to the Print Provider. This eliminates the need for order
+            fulfillment and storage space.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
