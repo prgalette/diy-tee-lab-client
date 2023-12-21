@@ -14,8 +14,8 @@ const AboutPage = () => {
         opacity: "80%",
       }}
     >
-      <Card className="mx-auto" style={{ width: "62em" }}>
-      <Accordion style={{alignItems:"center"}}>
+  
+      <Accordion style={{marginTop: "150px", width: "62em"}}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>About</Accordion.Header>
           <Accordion.Body>
@@ -42,7 +42,6 @@ const AboutPage = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
-      </Card>
     </div>
   );
 };
