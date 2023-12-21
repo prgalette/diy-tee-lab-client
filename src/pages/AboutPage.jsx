@@ -2,19 +2,19 @@ import { Accordion, Container } from "react-bootstrap";
 
 const AboutPage = () => {
   return (
-    <Container>
-      <div
-        className="bg-image"
-        style={{
-          backgroundImage: `URL(
+    <div
+      className="bg-image"
+      style={{
+        backgroundImage: `URL(
           "https://res.cloudinary.com/dxl0hu3v9/image/upload/v1703166330/01_wucvds.jpg"
         )`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          height: "100vh",
-          opacity: "80%",
-        }}
-      >
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        height: "100vh",
+        opacity: "80%",
+      }}
+    >
+      <Container>
         <Accordion
           className="mx-auto"
           style={{ paddingTop: "250px", width: "62em" }}
@@ -45,8 +45,8 @@ const AboutPage = () => {
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>
-      </div>
-    </Container>
+      </Container>
+    </div>
   );
 };
 
