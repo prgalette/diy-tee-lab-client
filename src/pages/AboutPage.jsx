@@ -15,7 +15,7 @@ const AboutPage = () => {
       }}
     >
   
-      <Accordion style={{width: "62em"}}>
+      <Accordion className="mx-auto" style={{paddingTop: "250px", width: "62em"}}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>About</Accordion.Header>
           <Accordion.Body>
