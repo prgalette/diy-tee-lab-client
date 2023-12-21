@@ -24,20 +24,18 @@ const OrdersPage = () => {
           <>
             {orders.map((shirt) => {
               return (
-                <Container>
-                  <button style={{ borderRadius: "8px" }}>
-                    <Card className="mx-auto" style={{ width: "26em" }}>
-                      <Link
-                        className="link-secondary"
-                        to={`/order-details/${shirt.id}`}
-                        key={shirt.id}
-                        style={{ textDecoration: "none" }}
-                      >
-                        <h2>{shirt.designName}</h2>
-                      </Link>
-                    </Card>
-                  </button>
-                </Container>
+                <button style={{ borderRadius: "8px" }}>
+                  <Card className="mx-auto" style={{ width: "26em" }}>
+                    <Link
+                      className="link-secondary"
+                      to={`/order-details/${shirt.id}`}
+                      key={shirt.id}
+                      style={{ textDecoration: "none" }}
+                    >
+                      <h2>{shirt.designName}</h2>
+                    </Link>
+                  </Card>
+                </button>
               );
             })}
           </>
