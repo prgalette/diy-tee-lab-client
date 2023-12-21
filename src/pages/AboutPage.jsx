@@ -1,4 +1,4 @@
-import { Accordion } from "react-bootstrap";
+import { Accordion, Card } from "react-bootstrap";
 
 const AboutPage = () => {
   return (
@@ -14,6 +14,7 @@ const AboutPage = () => {
         opacity: "80%",
       }}
     >
+      <Card className="mx-auto" style={{ width: "62em" }}>
       <Accordion style={{alignItems:"center"}}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>About</Accordion.Header>
@@ -41,6 +42,7 @@ const AboutPage = () => {
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
+      </Card>
     </div>
   );
 };
