@@ -5,9 +5,9 @@ const AboutPage = () => {
     <div
       className="bg-image"
       style={{
-        backgroundImage: URL(
+        backgroundImage: `URL(
           "https://res.cloudinary.com/dxl0hu3v9/image/upload/v1703166330/01_wucvds.jpg"
-        ),
+        )`,
         height: "100vh",
         opacity: "80%",
       }}
