@@ -14,7 +14,7 @@ const AboutPage = () => {
         opacity: "80%",
       }}
     >
-      <Accordion className="d-flex justify-content-center">
+      <Accordion style={{alignItems:"center"}}>
         <Accordion.Item eventKey="0">
           <Accordion.Header>About</Accordion.Header>
           <Accordion.Body>
